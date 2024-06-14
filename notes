@@ -77,3 +77,7 @@ Batch: 16
 Simultaneously overfitting (train acc > valid acc) and underfitting (train acc < 95%).
 
 Try the classic Word2Vec + CNN arch instead.
+
+---
+
+Without any regularization, we can get 95% accuracy on test set, but validation accuracy has been stabilized for a while at 91%.
