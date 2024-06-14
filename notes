@@ -81,3 +81,19 @@ Try the classic Word2Vec + CNN arch instead.
 ---
 
 Without any regularization, we can get 95% accuracy on test set, but validation accuracy has been stabilized for a while at 91%.
+
+---
+
+This model is expressive enough:
+
+inputs = tf.keras.Input(shape=(384,))
+x = layers.Dense(100, activation='relu')(inputs)
+x = layers.Dense(70, activation='relu')(x)
+x = layers.Dense(40, activation='relu')(x)
+outputs = layers.Dense(4, activation='softmax')(x)
+model = tf.keras.Model(inputs=inputs, outputs=outputs)
+model.summary()
+
+It overfits 97% on test set, 89% validation set
+
+---
